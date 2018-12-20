@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dojo/container_page/ContainerPage.dart';
+import 'package:flutter_dojo/basic/IconPage.dart';
+import 'package:flutter_dojo/basic/ImagePage.dart';
+import 'package:flutter_dojo/basic/TextPage.dart';
 import 'package:flutter_dojo/main_page/DojoBean.dart';
 import 'package:flutter_dojo/main_page/MainPageListView.dart';
 
@@ -12,9 +14,9 @@ class MainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final dojoBeans = [
-      DojoBean('Container', '111111111'),
-      DojoBean('aaaa2', ''),
-      DojoBean('aaaa3', ''),
+      DojoBean('TextPage', '111111111'),
+      DojoBean('ImagePage', ''),
+      DojoBean('IconPage', ''),
       DojoBean('aaaa4', ''),
       DojoBean('aaaa5', ''),
       DojoBean('aaaa6', ''),
@@ -46,7 +48,15 @@ class MainPage extends StatelessWidget {
     switch (index) {
       case 0:
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => ContainerPage()));
+            context, MaterialPageRoute(builder: (context) => TextPage()));
+        break;
+      case 1:
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => ImagePage()));
+        break;
+      case 2:
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => IconPage()));
         break;
     }
   }
